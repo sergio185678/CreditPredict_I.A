@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CreditPredict</title>
+    <link rel="stylesheet" href="css/estilo test.css">
+    <script src="https://kit.fontawesome.com/b1ed0ee617.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html"><img src="img/logo.png" alt="" class="logo"></a>
+            <h1>CreditPredict</h1>
+        </div> 
+    </header>
+	<div class="container">
+		<section id="p0">
+			<h3>1- ¿Cuál es tu género?</h3>
+                <br>
+				<label>
+					<input type="radio" value="0" name="p0"onclick="respuesta(0,this)"> Femenino
+				</label>
+				<label>
+					<input type="radio" value="1" name="p0"onclick="respuesta(0,this)"> Masculino
+				</label>
+		</section>
+		<section id="p1">
+			<h3>2- ¿Cuál es su edad?</h3>
+                <br>
+				<label>
+					<input type="radio" value="0" name="p1"onclick="respuesta(1,this)"> 18 - 30 años
+				</label>
+				<label>
+					<input type="radio" value="1" name="p1"onclick="respuesta(1,this)"> 31 - 50 años
+				</label>
+				<label>
+					<input type="radio" value="2" name="p1"onclick="respuesta(1,this)"> 51 - 70 años
+				</label>
+		</section>
+		<section id="p2">
+			<h3>3- ¿Cuenta con un vehículo propio?</h3>
+                <br>
+				<label>
+					<input type="radio" value="0" name="p2"onclick="respuesta(2,this)"> No
+				</label>
+				<label>
+					<input type="radio" value="1" name="p2"onclick="respuesta(2,this)"> Si
+				</label>
+		</section>
+		<section id="p3">
+			<h3>4- ¿Cuenta con una vivienda propia?</h3>
+                <br>
+				<label>
+					<input type="radio" value="0" name="p3"onclick="respuesta(3,this)"> No
+				</label>
+				<label>
+					<input type="radio" value="1" name="p3"onclick="respuesta(3,this)"> Si
+				</label>
+		</section>
+		<section id="p4">
+			<h3>5- ¿Cuantos hijos usted tiene?</h3>
+                <br>
+				<input type="text" id="hijos" class="txt"><br><br>
+		</section>
+		<section id="p5">
+			<h3>6- ¿Cual es tu ganancia anual en dólares?</h3>
+                <br>
+				<label>
+				    <input type="radio" value="0" name="p5"onclick="respuesta(5,this)"> menor a $40k
+				</label>
+				<label>
+					<input type="radio" value="1" name="p5"onclick="respuesta(5,this)"> $40k - $60k
+				</label>
+				<label>
+					<input type="radio" value="2" name="p5"onclick="respuesta(5,this)"> $60k - $80k
+				</label>
+				<label>
+					<input type="radio" value="3" name="p5"onclick="respuesta(5,this)"> $80k - $120k
+				</label>
+				<label>
+					<input type="radio" value="4" name="p5"onclick="respuesta(5,this)"> más de $120k
+				</label>
+		</section>
+		<section id="p6">
+			<h3>7- ¿Cual es tu estado laboral actual?</h3>
+                <br>
+				<label>
+				    <input type="radio" value="0" name="p6"onclick="respuesta(6,this)"> Asociado comercial
+				</label>
+				<label>
+					<input type="radio" value="1" name="p6"onclick="respuesta(6,this)"> Pensionista
+				</label>
+				<label>
+					<input type="radio" value="2" name="p6"onclick="respuesta(6,this)"> Servidor del estado
+				</label>
+				<label>
+					<input type="radio" value="3" name="p6"onclick="respuesta(6,this)"> Estudiante
+                </label>
+                <label>
+					<input type="radio" value="4" name="p6"onclick="respuesta(6,this)"> Trabajando
+                </label>
+		</section>
+		<section id="p7">
+			<h3>8- ¿Cual es tu nivel de educación?</h3>
+                <br>
+				<label>
+				    <input type="radio" value="0" name="p7"onclick="respuesta(7,this)"> Grado académico
+				</label>
+				<label>
+					<input type="radio" value="1" name="p7"onclick="respuesta(7,this)"> Educación Universitaria
+				</label>
+				<label>
+					<input type="radio" value="3" name="p7"onclick="respuesta(7,this)"> Educación Secundaria
+				</label>
+				<label>
+					<input type="radio" value="2" name="p7"onclick="respuesta(7,this)"> Educación Primaria
+		</section>
+		<section id="p8">
+			<h3>9- ¿Cual es tu estado matrimonial?</h3>
+                <br>
+				<label>
+				    <input type="radio" value="0" name="p8"onclick="respuesta(8,this)"> Casado
+				</label>
+				<label>
+					<input type="radio" value="2" name="p8"onclick="respuesta(8,this)"> Soltero
+				</label>
+				<label>
+					<input type="radio" value="1" name="p8"onclick="respuesta(8,this)"> Otro
+				</label>
+		</section>
+		<section id="p9">
+			<h3>10- ¿En donde esta viviendo actualmente?</h3>
+                <br>
+				<label>
+				    <input type="radio" value="1" name="p9"onclick="respuesta(9,this)"> Casa o Departamento propio
+				</label>
+				<label>
+					<input type="radio" value="2" name="p9"onclick="respuesta(9,this)"> Departamento alquilado
+				</label>
+				<label>
+					<input type="radio" value="3" name="p9"onclick="respuesta(9,this)"> En la vivienda de un pariente
+				</label>
+				<label>
+					<input type="radio" value="0" name="p9"onclick="respuesta(9,this)"> En un departamento compartido
+				</label>
+		</section>
+		<section id="p10">
+			<h3>11- ¿Esta desempleado?</h3>
+                <br>
+				<label>
+				    <input type="radio" value="0" name="p10"onclick="respuesta(10,this)"> No
+				</label>
+				<label>
+					<input type="radio" value="1" name="p10"onclick="respuesta(10,this)"> Si
+				</label>
+		</section>
+		
+		<section id="p11">
+			<h3>12- ¿Cuál es el tamaño de su familia?</h3>
+			<br>
+			<input type="text" id="familia" class="txt"><br><br>
+		</section>
+
+		<section id="p12">
+			<h3>13- ¿Cuál es tu ocupación?</h3>
+                <br>
+				<br>
+				<div class="box">
+					<select id="ocupacion">
+					  <option value="0">Contador</option>
+					  <option value="1">Personal de limpieza</option>
+					  <option value="2">Personal de cocina</option>
+					  <option value="3">Trabajador esencial de empresa</option>
+					  <option value="4">Conductor</option>
+					  <option value="5">Personal de recursos humanos</option>
+					  <option value="6">Personal de tecnología avanzado</option>
+					  <option value="7">Personal de TI</option>
+					  <option value="8">Obrero</option>
+					  <option value="9">Trabajador principiante</option>
+					  <option value="10">Gerente</option>
+					  <option value="11">Personal de medicina</option>
+					  <option value="12">Personal de servicio privado</option>
+					  <option value="13">Agente de bienes raíces</option>
+					  <option value="14">Personal de ventas</option>
+					  <option value="15">Secretaria</option>
+					  <option value="16">Personal de seguridad</option>
+					  <option value="17">Mozo/Barman</option>
+					</select>
+				  </div>
+		</section>
+
+		<br>
+		<button onclick="finalizar()">Finalizar</button><br>
+
+	</div>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Celular</h4>
+                <p>903506607</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>info_creditpredict123@creditpredict.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Dirección</h4>
+                <p>Av. Javier Prado N° 163 , San Isidro, Lima, Perú</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; Credit Predict | Flores Sergio / Paredes Renzo / Pereira Diego</h2>
+    </footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
+	
+	<!-- script -->
+	<script type="text/javascript">
+
+		var opcion_elegida=[];
+		var modelo_credit_limit = null;
+		var array_aprobation_credit=[];
+		var array_credit_limit=[];
+		var aprobo;
+		var limitecredito;
+
+		(async () => {
+		    console.log("Cargando modelos...");
+		    modelo1 = await tf.loadLayersModel("aprobation model/model.json");
+			modelo2 = await tf.loadLayersModel("creditlimit model/model.json");
+		    console.log("Modelos cargados");
+		})();
+
+		function respuesta(num_pregunta,seleccionada){
+
+			opcion_elegida[num_pregunta] = seleccionada.value;
+
+			id="p" + num_pregunta;
+
+			labels = document.getElementById(id).childNodes;
+			
+			labels[5].style.backgroundColor = "white";
+			labels[7].style.backgroundColor = "white";
+			if(labels[9]!=null){labels[9].style.backgroundColor = "white";}
+			if(labels[11]!=null){labels[11].style.backgroundColor = "white";}
+			if(labels[13]!=null){labels[13].style.backgroundColor = "white";}
+
+			seleccionada.parentNode.style.backgroundColor = "#cec0fc";
+		}
+		function aprobacioncredito(){
+			array_credit_aprobation=[opcion_elegida[0],opcion_elegida[2],opcion_elegida[3],opcion_elegida[4]
+			,opcion_elegida[5],opcion_elegida[6],opcion_elegida[7],opcion_elegida[8],opcion_elegida[9],opcion_elegida[10]
+			,opcion_elegida[12],opcion_elegida[11],opcion_elegida[1]]
+
+			array_credit_aprobation=array_credit_aprobation.map(str => {
+  				return Number(str);
+			});
+
+			if (modelo1 != null) {
+          		var tensor = tf.tensor2d([array_credit_aprobation]);
+          		var prediccion = modelo1.predict(tensor).dataSync();
+				
+				if(prediccion[0]<0.5){aprobo=0;}
+				else{aprobo=1;}
+			}
+		}
+		function creditolimit(){
+			array_credit_limit=[opcion_elegida[1],opcion_elegida[0],opcion_elegida[7],opcion_elegida[8],opcion_elegida[5]];
+
+			array_credit_limit=array_credit_limit.map(str => {
+  				return Number(str);
+			});
+
+			if (modelo2 != null) {
+          		var tensor = tf.tensor2d([array_credit_limit]);
+          		var prediccion = modelo2.predict(tensor).dataSync();
+          		prediccion = Math.round(prediccion, 1);
+				limitecredito=prediccion;
+			}
+		}
+		function finalizar(){
+			opcion_elegida[4]=document.getElementById("hijos").value;
+			opcion_elegida[11]=document.getElementById("familia").value;
+			opcion_elegida[12]=document.getElementById("ocupacion").value;
+
+			aprobacioncredito();
+			creditolimit();
+			
+			let html = `<ol style="display: inline-block;">`;
+			if(isNaN(aprobo)){
+				Swal.fire({
+          		title: "Advertencia",
+          		text: "Faltan preguntas por responder",
+          		icon: "warning",
+        		});
+			}
+			else if(aprobo==1){
+				if(limitecredito==1){
+					Swal.fire({
+          			title: "Aprobastes obtener una tarjeta de crédito",
+          			text: "Usted cuenta con una alta posibilidad de obtener una tarjeta de crédito en una entidad bancaria. Y puedes obtener un limite crediticio menor a $10000",
+          			icon: "success",
+        		});
+				}
+				else if(limitecredito==2){
+					Swal.fire({
+          			title: "Aprobastes obtener una tarjeta de crédito",
+          			text: "Usted cuenta con una alta posibilidad de obtener una tarjeta de crédito en una entidad bancaria. Y puedes obtener un limite crediticio entre $10000 a $20000",
+          			icon: "success",
+        		});
+				}
+				else if(limitecredito==3){
+					Swal.fire({
+          			title: "Aprobastes obtener una tarjeta de crédito",
+          			text: "Usted cuenta con una alta posibilidad de obtener una tarjeta de crédito en una entidad bancaria. Y puedes obtener un limite crediticio entre $20000 a $30000",
+          			icon: "success",
+        		});
+				}	
+				else if(limitecredito==4){
+					Swal.fire({
+          			title: "Aprobastes obtener una tarjeta de crédito",
+          			text: "Usted cuenta con una alta posibilidad de obtener una tarjeta de crédito en una entidad bancaria. Y puedes obtener un limite crediticio mayor a $30000",
+          			icon: "success",
+        		});
+				}	
+			}
+			else{
+				Swal.fire({
+          		title: "No aprobastes obtener una tarjeta de crédito",
+          		text: "Te recomendamos que analizes todas las preguntas y ver donde puedes mejorar para obtener una tarjeta de crédito.",
+          		icon: "error",
+        		});
+			}
+			
+		}
+	</script>
+</body>
+
+</html>						

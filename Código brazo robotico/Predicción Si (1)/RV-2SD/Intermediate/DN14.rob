@@ -1,0 +1,136 @@
+TIMESTAMP: DATE: 16.11.2022 TIME: 18:13:29
+---------------------------------------------------------------------------
+
+MODUL: §$$$PROG$$$DN14§ MAIN ?MAIN:START?
+COMPILER: cirosCompilerMelfaBasic5.EXE
+VERSION: 6.2.2.12323
+NEXT GLOBAL ADDRESS: <0:20>
+
+---------------------------------------------------------------------------
+EXPORT
+---------------------------------------------------------------------------
+
+PROC: $$$PROG$$$DN14
+FORMAL PARAMETERS: 
+
+---------------------------------------------------------------------------
+IMPORT
+---------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+SYMBOLIC IRDATA
+---------------------------------------------------------------------------
+DECLARATION :
+BEGIN
+DEFREC,1,B,1,WLD,1,ADX,2,I; <TYPE:1,B,1,WLD,1,ADX,2,I><USER:$$$PROG$$$DN14#P1> :=  <0:0>
+DEFREC,1,B,1,WLD,1,ADX,2,I; <TYPE:1,B,1,WLD,1,ADX,2,I><USER:$$$PROG$$$DN14#P2> :=  <0:5>
+DEFREC,1,B,1,WLD,1,ADX,2,I; <TYPE:1,B,1,WLD,1,ADX,2,I><USER:$$$PROG$$$DN14#P3> :=  <0:10>
+DEFREC,1,B,1,WLD,1,ADX,2,I;// Direct Source Register
+MOVDAT,B,%BR,<0:15>,B,%CON,1;
+MOVDAT,WLDPOSX,%BR,<0:16>,R,%CON,270.00;
+MOVDAT,WLDPOSY,%BR,<0:16>,R,%CON,-0.00;
+MOVDAT,WLDPOSZ,%BR,<0:16>,R,%CON,382.00;
+MOVDAT,WLDORIT,%BR,<0:16>,R,%CON,-3.141593;
+MOVDAT,WLDORIA,%BR,<0:16>,R,%CON,0.000000;
+MOVDAT,WLDORIO,%BR,<0:16>,R,%CON,-3.141593;
+MOVDAT,ADX1,%BR,<0:17>,R,%CON,1E38;
+MOVDAT,ADX2,%BR,<0:17>,R,%CON,1E38;
+MOVDAT,I,%BR,<0:18>,I,%CON,7;
+MOVDAT,I,%BR,<0:19>,I,%CON,0;
+MOVMEM,40,%BR,<0:0>,%BR,<0:15>;
+MOVDAT,B,%BR,<0:15>,B,%CON,1;
+MOVDAT,WLDPOSX,%BR,<0:16>,R,%CON,270.00;
+MOVDAT,WLDPOSY,%BR,<0:16>,R,%CON,100.00;
+MOVDAT,WLDPOSZ,%BR,<0:16>,R,%CON,482.00;
+MOVDAT,WLDORIT,%BR,<0:16>,R,%CON,-3.141593;
+MOVDAT,WLDORIA,%BR,<0:16>,R,%CON,0.000000;
+MOVDAT,WLDORIO,%BR,<0:16>,R,%CON,-3.141593;
+MOVDAT,ADX1,%BR,<0:17>,R,%CON,1E38;
+MOVDAT,ADX2,%BR,<0:17>,R,%CON,1E38;
+MOVDAT,I,%BR,<0:18>,I,%CON,7;
+MOVDAT,I,%BR,<0:19>,I,%CON,0;
+MOVMEM,40,%BR,<0:5>,%BR,<0:15>;
+MOVDAT,B,%BR,<0:15>,B,%CON,1;
+MOVDAT,WLDPOSX,%BR,<0:16>,R,%CON,270.00;
+MOVDAT,WLDPOSY,%BR,<0:16>,R,%CON,100.00;
+MOVDAT,WLDPOSZ,%BR,<0:16>,R,%CON,250.00;
+MOVDAT,WLDORIT,%BR,<0:16>,R,%CON,3.141593;
+MOVDAT,WLDORIA,%BR,<0:16>,R,%CON,0.000000;
+MOVDAT,WLDORIO,%BR,<0:16>,R,%CON,3.141593;
+MOVDAT,ADX1,%BR,<0:17>,R,%CON,1E38;
+MOVDAT,ADX2,%BR,<0:17>,R,%CON,1E38;
+MOVDAT,I,%BR,<0:18>,I,%CON,7;
+MOVDAT,I,%BR,<0:19>,I,%CON,0;
+MOVMEM,40,%BR,<0:10>,%BR,<0:15>;
+END
+---------------------------------------------------------------------------
+BODY :
+BEGIN
+!MAIN:START!MOVDAT,I,%BR,<SYS:DEBUGON:0>,I,%CON,0;
+MOVDAT,S,%BR,<SYS:ERRORBEEPPATH:0>,S,%CON,'C:\Program Files\Festo Didactic\CIROS 6.2\CIROS Studio\Plugins\lib\mba4\mba4esnd.rob';
+TSKBEG,0,25,'TASK::$$$PROG$$$DN14';
+MOVDAT,I,%ST,0,I,%CON,24270;
+!EXT:$$$PROG$$$DN14!!$$$PROG$$$DN14:_$$$PROG$$$DN14!PRCBEG,0,'$$$PROG$$$DN14';
+BLBEG,0,1;
+DEFREC,1,R;// Direct Source Register
+DEFREC,1,B,1,WLD,1,ADX,2,I;// Direct Source Register
+!$$$PROG$$$DN14:1!CASE,%ST,0,-1,?$$$PROG$$$DN14:2?;
+!$$$PROG$$$DN14:2!!$$$PROG$$$DN14:_1!MOVDAT,I,%BR,<SYS:LINE:0>,I,%CON,1;
+LINENO,1,'..\DN14.MB5',513;
+TYPCON,R,%BR,<1:0>,I,%CON,60;
+MOVDAT,R,%ST,0,R,%BR,<1:0>;
+CALL,?SYS:SPD?;
+!$$$PROG$$$DN14:_2!MOVDAT,I,%BR,<SYS:LINE:0>,I,%CON,2;
+!$$$PROG$$$DN14:_SALTO!!$$$PROG$$$DN14:_3!MOVDAT,I,%BR,<SYS:LINE:0>,I,%CON,3;
+LINENO,3,'..\DN14.MB5',513;
+TSKLOCK;
+MOVMEM,40,%BR,<1:1>,%BR,<0:5>;
+DIRADR,%ST,0,B,%BR,<1:1>;
+CALL,?SYS:ELIMINATE_UNDEFINES_IN_POS?;
+MOVSPEC,4,I,%CON,0,I,%CON,-1;
+DIRADR,%ST,0,B,%BR,<1:1>;
+CALL,?SYS:MOV?;
+TSKUNLOCK;
+!$$$PROG$$$DN14:_4!MOVDAT,I,%BR,<SYS:LINE:0>,I,%CON,4;
+LINENO,4,'..\DN14.MB5',513;
+TSKLOCK;
+MOVMEM,40,%BR,<1:1>,%BR,<0:10>;
+DIRADR,%ST,0,B,%BR,<1:1>;
+CALL,?SYS:ELIMINATE_UNDEFINES_IN_POS?;
+MOVSPEC,4,I,%CON,0,I,%CON,-1;
+DIRADR,%ST,0,B,%BR,<1:1>;
+CALL,?SYS:MOV?;
+TSKUNLOCK;
+!$$$PROG$$$DN14:_5!MOVDAT,I,%BR,<SYS:LINE:0>,I,%CON,5;
+LINENO,5,'..\DN14.MB5',513;
+TSKLOCK;
+MOVMEM,40,%BR,<1:1>,%BR,<0:5>;
+DIRADR,%ST,0,B,%BR,<1:1>;
+CALL,?SYS:ELIMINATE_UNDEFINES_IN_POS?;
+MOVSPEC,4,I,%CON,0,I,%CON,-1;
+DIRADR,%ST,0,B,%BR,<1:1>;
+CALL,?SYS:MOV?;
+TSKUNLOCK;
+!$$$PROG$$$DN14:_6!MOVDAT,I,%BR,<SYS:LINE:0>,I,%CON,6;
+LINENO,6,'..\DN14.MB5',513;
+TSKLOCK;
+MOVMEM,40,%BR,<1:1>,%BR,<0:0>;
+DIRADR,%ST,0,B,%BR,<1:1>;
+CALL,?SYS:ELIMINATE_UNDEFINES_IN_POS?;
+MOVSPEC,4,I,%CON,0,I,%CON,-1;
+DIRADR,%ST,0,B,%BR,<1:1>;
+CALL,?SYS:MOV?;
+TSKUNLOCK;
+!$$$PROG$$$DN14:_7!MOVDAT,I,%BR,<SYS:LINE:0>,I,%CON,7;
+LINENO,7,'..\DN14.MB5',513;
+GOTO,?$$$PROG$$$DN14:_SALTO?;
+!$$$PROG$$$DN14:0!CONSTATE,%CON,-2,%CON,0;
+BLEND;
+PRCEND;
+TSKEND;
+END
+---------------------------------------------------------------------------
+SUBROUTINES :
+BEGIN
+END
+---------------------------------------------------------------------------

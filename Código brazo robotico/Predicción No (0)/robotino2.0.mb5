@@ -1,0 +1,11 @@
+1 spd 60
+2 
+3 *salto
+4 mov P4
+5 mov P5
+6 mov P6
+7 mov P4
+8 mov P1
+9 mov P5
+10 
+11 goto *salto

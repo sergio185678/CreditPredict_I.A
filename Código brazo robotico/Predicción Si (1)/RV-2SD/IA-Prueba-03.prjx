@@ -1,0 +1,19 @@
+<!-- Please do only modify this file with the CIROS-Project Manager! -->
+<?xml version="1.0"?>
+<CirosCompilerProject Version="1.0">
+	<CompilerType>MBA5</CompilerType>
+	<Name>IA-Prueba-03</Name>
+	<ReadOnly>false</ReadOnly>
+	<Files>
+		<File Type="Library" Mode="Normal">.\lib\MBA5\mba5mlib.rob</File>
+		<File Type="Library" Mode="Normal">.\lib\MBA5\mba5flib.rob</File>
+		<File Type="Library" Mode="Normal">.\lib\MBA5\mba5mtlib.rob</File>
+		<File Type="Library" Mode="Normal">.\lib\MBA5\mba5movlib.rob</File>
+		<File Type="Library" Mode="Normal">.\lib\MBA5\mba5sysvarlib.rob</File>
+		<File Type="Library" Mode="Normal">.\lib\MBA5\mba5stmtlib.rob</File>
+		<File Type="System" Mode="Hidden">.\$system.mb5</File>
+		<File Type="System" Mode="Hidden">.\$fdecl.mb5</File>
+		<File Type="Module" Mode="Main">.\DN14.MB5</File>
+		<File Type="PositionList" Mode="Normal">.\DN14.POS</File>
+	</Files>
+</CirosCompilerProject>
